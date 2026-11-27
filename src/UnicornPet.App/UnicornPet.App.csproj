@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>UnicornPet.App</RootNamespace>
+    <AssemblyName>UnicornPet</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnicornPet.Core\UnicornPet.Core.csproj" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Configuration" />
+    <Resource Include="Assets\poses\*.png" />
+    <Resource Include="Assets\game\*.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnicornPet.Updater\UnicornPet.Updater.csproj" />
+  </ItemGroup>
+</Project>
+

@@ -1,0 +1,66 @@
+<Window x:Class="UnicornPet.App.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Unicorn Pet settings" Width="380" SizeToContent="Height" ResizeMode="NoResize"
+        WindowStartupLocation="Manual" ShowInTaskbar="True" FontFamily="Segoe UI" FontSize="13" Background="#FFFBF8">
+    <!-- the buttons stay pinned at the bottom; the rest scrolls when the window is capped to a small work area -->
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20,14,20,20">
+            <Button x:Name="SaveButton" Content="Save" Width="80" Padding="0,4" IsDefault="True" Margin="0,0,8,0"/>
+            <Button x:Name="CancelButton" Content="Cancel" Width="80" Padding="0,4" IsCancel="True"/>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Focusable="False">
+            <StackPanel Margin="20,20,20,4">
+                <TextBlock Text="Your name" FontWeight="SemiBold"/>
+                <TextBox x:Name="NameBox" MaxLength="30" Margin="0,4,0,0" Padding="4,3"/>
+                <TextBlock x:Name="ErrorText" Foreground="#B3261E" Margin="0,4,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <TextBlock x:Name="PreviewText" Foreground="#6B5470" Margin="0,6,0,0" TextWrapping="Wrap"/>
+                <CheckBox x:Name="UseWindowsBox" Content="Use my Windows first name" Margin="0,14,0,0"/>
+                <TextBlock Text="Used when the name box is empty." Foreground="#6B5470" Margin="20,2,0,0"/>
+                <TextBlock Text="Name your unicorn" FontWeight="SemiBold" Margin="0,16,0,0"/>
+                <TextBox x:Name="PetNameBox" MaxLength="30" Margin="0,4,0,0" Padding="4,3"/>
+                <TextBlock x:Name="PetErrorText" Foreground="#B3261E" Margin="0,4,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <TextBlock x:Name="PetPreviewText" Foreground="#6B5470" Margin="0,6,0,0" TextWrapping="Wrap"/>
+                <Separator Margin="0,14,0,10"/>
+                <TextBlock Text="Size" FontWeight="SemiBold"/>
+                <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                    <RadioButton x:Name="SizeSmallButton" Content="Small" GroupName="PetSizeGroup" Margin="0,0,18,0"/>
+                    <RadioButton x:Name="SizeMediumButton" Content="Medium" GroupName="PetSizeGroup" Margin="0,0,18,0"/>
+                    <RadioButton x:Name="SizeLargeButton" Content="Large" GroupName="PetSizeGroup"/>
+                </StackPanel>
+                <CheckBox x:Name="SparklesBox" Content="Sparkles from the horn" Margin="0,10,0,0"/>
+                <CheckBox x:Name="IdlePoopBox" Content="Sparkle poop when the PC is left alone" Margin="0,6,0,0" Visibility="Collapsed"/>
+                <TextBlock x:Name="IdlePoopHint" Text="After 3 minutes without keyboard or mouse. Any key or mouse movement clears it at once. Only the time of the last input is read, never what was typed." Foreground="#6B5470" Margin="20,2,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <CheckBox x:Name="RandomZoomiesBox" Content="Zoomies now and then" Margin="0,6,0,0" Visibility="Collapsed"/>
+                <Separator Margin="0,14,0,10"/>
+                <CheckBox x:Name="CheekyBox" Content="Cheeky mode" Margin="0,2,0,0"/>
+                <CheckBox x:Name="ScheduledBox" Content="Scheduled messages" Margin="0,6,0,0"/>
+                <CheckBox x:Name="StartupBox" Content="Start with Windows" Margin="0,6,0,0"/>
+                <Separator x:Name="MsgSeparator" Margin="0,14,0,10" Visibility="Collapsed"/>
+                <TextBlock x:Name="MsgHeader" Text="Messages" FontWeight="SemiBold" Visibility="Collapsed"/>
+                <CheckBox x:Name="FetchBox" Content="Fetch new messages" Margin="0,6,0,0" Visibility="Collapsed"/>
+                <TextBlock x:Name="FetchHint" Text="A small signed list from the makers, text only, checked at most once a day. Untick to stop this check." Foreground="#6B5470" Margin="20,2,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <StackPanel x:Name="MsgSourcePanel" Orientation="Horizontal" Margin="0,10,0,0" Visibility="Collapsed">
+                    <RadioButton x:Name="MsgBuiltInButton" Content="Built-in" GroupName="MsgSourceGroup" Margin="0,0,14,0" Visibility="Collapsed"/>
+                    <RadioButton x:Name="MsgFileButton" Content="A file" GroupName="MsgSourceGroup" Margin="0,0,14,0" Visibility="Collapsed"/>
+                    <RadioButton x:Name="MsgWebButton" Content="A web address" GroupName="MsgSourceGroup" Visibility="Collapsed"/>
+                </StackPanel>
+                <TextBox x:Name="MsgFileBox" MaxLength="300" Margin="0,6,0,0" Padding="4,3" Visibility="Collapsed"/>
+                <TextBlock x:Name="MsgFileHint" Text="Type or paste the full path of a .json file, or drop the file here." Foreground="#6B5470" Margin="0,2,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <TextBox x:Name="MsgUrlBox" MaxLength="2048" Margin="0,6,0,0" Padding="4,3" Visibility="Collapsed"/>
+                <TextBlock x:Name="MsgWebHint" Text="Text only, read at most once a day from the address you type (https only, 64 KB at most). Whoever controls that address controls what she says. To stay offline choose Built-in and untick the box above." Foreground="#6B5470" Margin="0,2,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <TextBlock x:Name="MsgErrorText" Foreground="#B3261E" Margin="0,4,0,0" Visibility="Collapsed" TextWrapping="Wrap"/>
+                <Grid x:Name="MsgReloadRow" Margin="0,8,0,0" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="MsgReloadButton" Grid.Column="0" Content="Reload now" Padding="10,3" VerticalAlignment="Top" Visibility="Collapsed"/>
+                    <TextBlock x:Name="MsgStatusText" Grid.Column="1" Foreground="#6B5470" Margin="10,4,0,0" TextWrapping="Wrap" Visibility="Collapsed"/>
+                </Grid>
+                <TextBlock x:Name="MsgSectionsHeader" Text="Sections" FontWeight="SemiBold" Margin="0,12,0,0" Visibility="Collapsed"/>
+                <StackPanel x:Name="MsgSectionsPanel" Margin="0,2,0,0" Visibility="Collapsed"/>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    The work-safe build: ONE exe, no other files. The shared logic (UnicornPet.Core) and the shared window code (UnicornPet.App)
+    are compiled straight into it; there are no project or package references, so there are no dlls to ship.
+    The code-update machinery (UnicornPet.Updater), the startup registry code, the snapshot and maintenance flags are not compiled in.
+    No packer, no ILMerge, no compression, no obfuscation.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>UnicornPet</AssemblyName>
+    <RootNamespace>UnicornPet.App</RootNamespace>
+    <DefineConstants>$(DefineConstants);WORKSAFE</DefineConstants>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\unicorn.ico</ApplicationIcon>
+    <!-- the version resource shown in the file properties -->
+    <Company>Unicorn Pet</Company>
+    <Product>Unicorn Pet</Product>
+    <AssemblyTitle>Unicorn desktop pet</AssemblyTitle>
+    <Description>Unicorn desktop pet</Description>
+    <Copyright>Copyright (c) 2026 Unicorn Pet</Copyright>
+    <AssemblyVersion>2.1.2.0</AssemblyVersion>
+    <FileVersion>2.1.2.0</FileVersion>
+    <InformationalVersion>2.1.2</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Deterministic>true</Deterministic>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>false</GenerateBindingRedirectsOutputType>
+    <!-- no UnicornPet.exe.config next to the exe: the .NET Framework 4.8 runtime that ships with Windows is picked by default -->
+    <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- shared logic, compiled in (the update-checker, stager and zip code live in UnicornPet.Updater and are NOT here) -->
+    <Compile Include="..\UnicornPet.Core\**\*.cs" Exclude="..\UnicornPet.Core\obj\**;..\UnicornPet.Core\bin\**;..\UnicornPet.Core\Updater\ManifestCheck.cs;..\UnicornPet.Core\Updater\Manifest.cs;..\UnicornPet.Core\Updater\UpdateConfig.cs" LinkBase="Core" />
+    <EmbeddedResource Include="..\UnicornPet.Core\Resources\messages.default.json" LogicalName="messages.default.json" Link="Core\Resources\messages.default.json" />
+    <EmbeddedResource Include="..\UnicornPet.Core\Resources\sections.default.json" LogicalName="sections.default.json" Link="Core\Resources\sections.default.json" />
+    <!-- shared window code -->
+    <Compile Include="..\UnicornPet.App\BubbleControl.xaml.cs" Link="BubbleControl.xaml.cs" />
+    <Compile Include="..\UnicornPet.App\BubbleWindow.xaml.cs" Link="BubbleWindow.xaml.cs" />
+    <Compile Include="..\UnicornPet.App\GameArt.cs" Link="GameArt.cs" />
+    <Compile Include="..\UnicornPet.App\GameCanvas.cs" Link="GameCanvas.cs" />
+    <Compile Include="..\UnicornPet.App\GameWindow.cs" Link="GameWindow.cs" />
+    <Compile Include="..\UnicornPet.App\NoActivate.cs" Link="NoActivate.cs" />
+    <Compile Include="..\UnicornPet.App\PetMenu.cs" Link="PetMenu.cs" />
+    <Compile Include="..\UnicornPet.App\PetWindow.Idle.cs" Link="PetWindow.Idle.cs" />
+    <Compile Include="..\UnicornPet.App\PetWindow.Messages.cs" Link="PetWindow.Messages.cs" />
+    <Compile Include="..\UnicornPet.App\PetWindow.Modes.cs" Link="PetWindow.Modes.cs" />
+    <Compile Include="..\UnicornPet.App\PetWindow.Zoomies.cs" Link="PetWindow.Zoomies.cs" />
+    <Compile Include="..\UnicornPet.App\PetWindow.xaml.cs" Link="PetWindow.xaml.cs" />
+    <Compile Include="..\UnicornPet.App\PoopPieceWindow.cs" Link="PoopPieceWindow.cs" />
+    <Compile Include="..\UnicornPet.App\PresenceNative.cs" Link="PresenceNative.cs" />
+    <Compile Include="..\UnicornPet.App\SettingsWindow.xaml.cs" Link="SettingsWindow.xaml.cs" />
+    <Compile Include="..\UnicornPet.App\SingleInstance.cs" Link="SingleInstance.cs" />
+    <Compile Include="..\UnicornPet.App\SparkleLayer.cs" Link="SparkleLayer.cs" />
+    <Compile Include="..\UnicornPet.App\SpriteSet.cs" Link="SpriteSet.cs" />
+    <Compile Include="..\UnicornPet.App\TrayIcon.cs" Link="TrayIcon.cs" />
+    <Compile Include="..\UnicornPet.App\WindowsUserNameSource.cs" Link="WindowsUserNameSource.cs" />
+    <Page Include="..\UnicornPet.App\BubbleControl.xaml" Link="BubbleControl.xaml" />
+    <Page Include="..\UnicornPet.App\BubbleWindow.xaml" Link="BubbleWindow.xaml" />
+    <Page Include="..\UnicornPet.App\PetWindow.xaml" Link="PetWindow.xaml" />
+    <Page Include="..\UnicornPet.App\SettingsWindow.xaml" Link="SettingsWindow.xaml" />
+    <Resource Include="..\UnicornPet.App\Assets\poses\*.png" Link="Assets\poses\%(Filename)%(Extension)" />
+    <Resource Include="..\UnicornPet.App\Assets\game\*.png" Link="Assets\game\%(Filename)%(Extension)" />
+    <Resource Include="Assets\unicorn.ico" />
+  </ItemGroup>
+</Project>

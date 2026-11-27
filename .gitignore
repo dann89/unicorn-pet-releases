@@ -1,0 +1,14 @@
+assets-chatgpt/
+art/
+bin/
+obj/
+.vs/
+*.user
+*.pfx
+*.pem
+*.key
+signing-keys/
+
+dist/
+private*.xml
+tools/private-strings.txt

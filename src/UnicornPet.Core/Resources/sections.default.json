@@ -1,0 +1,73 @@
+{
+  "sections": [
+    { "id": "banter", "title": "Office banter", "lines": [
+      "Another meeting. Magical.",
+      "The printer can smell fear.",
+      "Per my last sparkle...",
+      "Who took the good stapler?",
+      "The office plant looks thirsty. So do you.",
+      "Somebody's left their mug in the sink again.",
+      "Teams says you're 'Away'. I say you're legendary.",
+      "The Wi-Fi is having a little nap.",
+      "Is it hot in here or is it just my horn?",
+      "Hot desking? I've had this spot for ages."
+    ]},
+    { "id": "pep", "title": "Pep talks", "lines": [
+      "You make hard things look easy, {name}.",
+      "Neigh-sayers don't get a vote today.",
+      "You've handled worse than this before.",
+      "Proud of you, {name}. Keep going.",
+      "You're the sparkle in this office.",
+      "Hard day? You're still doing brilliantly.",
+      "Every expert was once a beginner.",
+      "You don't have to be perfect, just keep moving."
+    ]},
+    { "id": "facts", "title": "Unicorn facts", "lines": [
+      "Fact: the unicorn is Scotland's national animal.",
+      "Fact: a group of unicorns is called a blessing.",
+      "Fact: unicorns run on glitter and kindness.",
+      "Fact: my horn is 87% sparkle, 13% attitude.",
+      "Fact: unicorns never forget a biscuit."
+    ]},
+    { "id": "randomfacts", "title": "Random facts", "lines": [
+      "Fact: honey never goes off. Archaeologists found edible honey in Egyptian tombs.",
+      "Fact: octopuses have three hearts and blue blood.",
+      "Fact: a day on Venus is longer than its year.",
+      "Fact: bananas are berries, but strawberries aren't.",
+      "Fact: wombat poo is cube-shaped.",
+      "Fact: sea otters hold hands when they sleep.",
+      "Fact: the Eiffel Tower grows about 15 cm taller in summer.",
+      "Fact: cows have best friends and get stressed when apart.",
+      "Fact: a cloud can weigh more than a million kilograms.",
+      "Fact: sloths can hold their breath longer than dolphins.",
+      "Fact: there are more trees on Earth than stars in the Milky Way.",
+      "Fact: Scotland has over 400 words for snow.",
+      "Fact: a snail can sleep for three years.",
+      "Fact: the shortest war in history lasted about 38 minutes.",
+      "Fact: humans share about 60% of their DNA with bananas."
+    ]},
+    { "id": "roasts", "title": "Office roasts", "lines": [
+      "Someone's checking the biscuit tin again.",
+      "That spreadsheet has more tabs than personality.",
+      "Somebody found a 2p discrepancy. Cancel Christmas.",
+      "Living for a reconciled balance sheet, apparently.",
+      "Another email about the fridge. Riveting.",
+      "There's a rota for the rota now.",
+      "Fresh passive-aggressive Post-it just dropped.",
+      "The stationery's restocked. Guard your pens.",
+      "The office is managing itself again.",
+      "Someone can be heard from three postcodes away.",
+      "Someone counted to ten once. Got to eleven.",
+      "That phone call has the whole office on it.",
+      "Office maths: 2 plus 2 equals overtime.",
+      "One counts it, one recounts it, one emails about it.",
+      "'Quick chat?' Run.",
+      "Reply-all strikes again.",
+      "Someone microwaved fish. Stay strong.",
+      "The meeting about the meeting has been moved.",
+      "Someone's seconds late? Time to act important.",
+      "Holiday request 5 weeks ahead? Too short notice, I'm afraid. Denied.",
+      "I'm afraid you came in at 8:01. I'm not paying you now."
+    ]}
+  ]
+}

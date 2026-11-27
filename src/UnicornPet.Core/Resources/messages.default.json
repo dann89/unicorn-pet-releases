@@ -1,0 +1,112 @@
+﻿{
+  "name": "",
+  "scheduled": [
+    { "id": "start", "time": "08:00", "pool": [
+      "Good morning, {name}! Today is going to be a good one.",
+      "Coffee first, world domination second. You've got this.",
+      "New day, fresh start. I believe in you, {name}.",
+      "Morning! Small steps still count. Let's go.",
+      "You showed up, and that's already half the battle. Good morning!",
+      "Rise and sparkle, {name}. I'll be right here cheering."
+    ]},
+    { "id": "lunch-soon", "time": "12:45", "pool": [
+      "Almost lunchtime. You've earned a proper break.",
+      "Lunch is nearly here. Step away from the screen soon, {name}.",
+      "Quarter to one: stomach says soon, brain says wrap up.",
+      "Nearly lunch! Finish that thought, then go eat something lovely.",
+      "Don't skip lunch, {name}. Unicorns insist.",
+      "Food o'clock is almost here. Hang in there."
+    ]},
+    { "id": "post-lunch", "time": "14:00", "pool": [
+      "Post-lunch slump? Stretch, sip some water, keep going.",
+      "The afternoon is a marathon. Roll your shoulders, {name}.",
+      "Two o'clock already. You're doing better than you think.",
+      "Slow afternoon? Pick one small task and win it.",
+      "Water, stretch, deep breath. Then you're unstoppable again.",
+      "Afternoon energy loading... have a snack if you need one."
+    ]},
+    { "id": "almost-five", "time": "16:50", "pool": [
+      "Ten minutes to five. Start wrapping up, {name}.",
+      "Almost home time! Finish strong.",
+      "Nearly there. Tidy up, jot tomorrow's first task, and relax.",
+      "Last stretch of the day. You did great today.",
+      "Ten more minutes and then it's yours again.",
+      "Almost five! Proud of you for today."
+    ]},
+    { "id": "home", "time": "17:00", "pool": [
+      "It's five o'clock. Time to go home, {name}!",
+      "Home time! Close the laptop, you've earned a rest.",
+      "Done for the day. Go do something that makes you happy.",
+      "Work is over. Unicorn-approved evening begins now.",
+      "Great job today, {name}. Now go relax.",
+      "Clocking off! See you tomorrow, superstar."
+    ]}
+  ],
+  "welcome": [
+    "Hi {name}! I'm your unicorn. Right-click me for options.",
+    "Hello {name}! I live here now. Right-click me for options.",
+    "Hi there! I'm your new unicorn. Right-click me for options and to set your name."
+  ],
+  "hello": [
+    "Good to see you, {name}!",
+    "I'm here! Let's have a good one, {name}.",
+    "Hello again, {name}.",
+    "Back on duty. Sparkles at the ready.",
+    "Hi {name}! Double-click me if you want a little encouragement.",
+    "Ready when you are, {name}."
+  ],  "random": [
+    "You're doing great, {name}.",
+    "Remember to drink some water.",
+    "Quick stretch? Your back will thank you.",
+    "Unfurrow that brow for a second.",
+    "Look away from the screen for twenty seconds. Spot something far away.",
+    "Breathe in. Breathe out. Carry on.",
+    "You're smarter than you give yourself credit for.",
+    "Tiny break, big difference.",
+    "Check your posture. Shoulders down, {name}.",
+    "I'm just here being a unicorn and cheering for you.",
+    "One thing at a time. That's all anyone does.",
+    "Sparkles for you!",
+    "Have you had a snack lately?",
+    "Whatever's on your plate, you can handle it.",
+    "Smile a little. It's free.",
+    "You make hard things look easy.",
+    "Reminder: you are loved, {name}.",
+    "Pretty sure you're the best person in this office.",
+    "Neigh-sayers don't get a vote today.",
+    "Anything fun planned for later?",
+    "Take a deep breath. Relax your jaw.",
+    "Good work so far. Keep going.",
+    "A little progress is still progress.",
+    "Hello! Just checking you're okay.",
+    "Stand up, shake out your hands, sit back down. Magic.",
+    "You deserve something nice today.",
+    "I'm so proud of you, {name}.",
+    "Gentle reminder to be kind to yourself.",
+    "Hydrate, then dominate.",
+    "Magic is just persistence with glitter."
+  ],
+  "cheeky": [
+    "Somebody just replied-all. Take a deep breath.",
+    "That meeting could have been an email, and we both know it.",
+    "If the printer jams today, it's personal. Stay calm.",
+    "Pretending to look busy? I won't tell.",
+    "Is it Friday yet? Asking for a unicorn.",
+    "That sigh was loud. I heard it.",
+    "Another 'quick question'. Sure it is.",
+    "Today's mood: out-of-office reply.",
+    "The coffee machine knows all your secrets.",
+    "Calendar says meeting, heart says nap.",
+    "'Per my last email' is basically a battle cry.",
+    "If staring at the screen worked, you'd be done by now.",
+    "Some days the horn is for ignoring the nonsense.",
+    "Who needs a meeting when there's a perfectly good mute button?",
+    "Remember: 'circle back' means 'please forget this'.",
+    "Reply-all is the final boss of email.",
+    "Today's agenda: survive, sparkle, snack.",
+    "Wi-Fi slow? Blame the Wi-Fi. It deserves it.",
+    "It's fine. Everything is fine. Have a biscuit.",
+    "You've been to three meetings about meetings. I'm so sorry."
+  ]
+}
+

@@ -1,0 +1,23 @@
+{
+  "random": [
+    "Remember to drink some water, {name}.",
+    "Quick stretch? Your shoulders will thank you.",
+    "One thing at a time. You've got this.",
+    "Sparkles for you!"
+  ],
+  "cheeky": [
+    "That meeting could have been an email.",
+    "Another 'quick question'. Sure it is."
+  ],
+  "sections": [
+    { "id": "banter", "title": "Office banter", "lines": [
+      "Another meeting. Magical.",
+      "The printer can smell fear.",
+      "Per my last sparkle..."
+    ]},
+    { "id": "pep", "title": "Pep talks", "lines": [
+      "You make hard things look easy, {name}.",
+      "Neigh-sayers don't get a vote today."
+    ]}
+  ]
+}
